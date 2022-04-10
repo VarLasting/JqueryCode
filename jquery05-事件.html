@@ -1,0 +1,103 @@
+<html>
+	<head>
+		<title>html</title>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="js/jquery-3.6.0.js"></script>
+		<style type="text/css">
+			div{
+			    height:300;
+				width:300;
+				background-color:gray;
+			}
+		</style>
+		
+		<script type="text/javascript">
+			$(function(){
+				/** 事件：键盘事件、鼠标事件
+				例：
+				js:onclick()
+				jquery:click() 写在ready函数之内(click mouseover mouseout mouseenter)
+				
+				$("li:first").mouseover(function(){
+					alert("li鼠标事件");
+				})
+				
+				$("div").mouseover(function(){
+				    $("div").css("background-color","red");
+				}).mouseout(function(){
+				    $("div").css("background-color","green");
+				});*/
+				
+				/**表单事件  focus() 获取焦点  blur() 失去焦点
+				$("[name]").focus(function(){
+					$(this).css("background-color","red");
+				
+				});
+				$("[name]").blur(function(){
+					$(this).css("background-color","gray");
+				
+				});*/
+				
+				/**复合事件 1、hover()切换mouseover()和mouseout()
+				
+				*/
+				$("div").hover(function(){
+				    $(this).css("background-color","red");
+				},function(){
+					$(this).css("background-color","yellow");
+				});
+				/**复合事件 2、toggle()  多个事件轮循，如果出错，可能是版本问题
+				
+				
+				$("body").toggle(function(){
+					$(this).css("background-color","gray");
+				},function(){
+					$(this).css("background-color","green");
+				},function(){
+					$(this).css("background-color","purple");
+				});*/
+				
+				});
+				function myCallback(){
+					alert("完毕");
+				
+				}
+				function myShow(){
+				    //show() 还可用fadeIn() slideDown()
+					$("h3").show(3000,myCallback);
+				}
+				function myHide(){
+					//hide() 还可用fadeOut() slideUp()
+					$("h3").hide(3000,myCallback);
+				}
+				
+		</script>
+	</head>
+	
+	<body>
+		<h3>hehe</h3>
+		</br>
+		<button onclick="myShow()">显示</button>
+		<button onclick="myHide()">隐藏</button>
+		
+		<form >
+			<input type="text" name="name" /><br/>
+			<input type="password" name="pwd" /><br/>
+			<input type="submit" value="登录" /><br/>
+		</form>
+		
+		
+	    <div>
+		    some text...
+		</div>
+		<ul>
+			<li>aaa</li>
+			<li id="b">bbb</li>
+			<li id="c">ccc</li>
+			<li id="d">ddd</li>
+			<li id="d">eee</li>
+		</ul>
+		
+		
+	</body>
+</html>

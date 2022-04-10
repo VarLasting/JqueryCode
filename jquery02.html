@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>html</title>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="js/jquery-3.6.0.js" ></script>
+		<script type="text/javascript">
+			function init(){
+			    //dom对象
+				var content = document.getElementById("biaoti");
+				alert(content.innerHTML);
+				//dom对象转化成jquery对象
+				alert($(content).html() + "********");
+			}
+			
+			$(function(){
+				//jQuery对象，对象名前最好加$符
+			    var $content = $("#biaoti");
+				alert($content.html() + " -----");
+				//不能用dom对象的方法
+				alert($content.innerHTML + "+++++");
+				//非要用，要转化，jquery对象转化成dom对象
+				//jQuery对象默认是数组或集合
+				alert($content[0].innerHTML + "+-+-+-+-+");
+				alert($content.get(0).innerHTML + "88888888")
+			});
+		
+		</script>
+	</head>
+	<!--
+	dom节点：元素节点、属性节点、文本节点
+	-->
+	<body onload="init()">
+		<p id="biaoti" title="请选择">你最喜欢的颜色是？</p>
+	
+	</body>
+</html>

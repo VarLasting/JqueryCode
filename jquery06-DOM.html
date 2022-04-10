@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>html</title>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="js/jquery-3.6.0.js"></script>
+		<script type="text/javascript">
+			
+			$(function(){
+			    //a、样式操作(css)
+				//$(".myclass").css("background-color","red");
+				//$(".myclass").css({"background-color":"green","font-size":"50","color":"red"});
+				
+				//b、内容操作（html() text()）
+				//alert($(".myclass").html());
+				//alert($(".myclass").text());
+				
+				
+				//c、取值、赋值val()  val(xxx)
+				alert($("#myid").val());
+				
+				
+				//d、节点与属性操作
+			});
+			
+			function myTest(){
+				$(".myclass").html("<p style='background-color:yellow;font-size:40'>haha</p>");
+				alert($(".myclass").text());
+			}
+			
+			function myVal(){
+				$("#myid").val("zanglianjun");
+			}
+		
+		</script>
+	
+	</head>
+	
+	<body>
+		<p class="myclass" >
+		
+			<font color="purple">color111</font>
+		
+		</p>
+		<button onclick="myTest()">update</button>
+		<br/><br/>
+	    <input type="text" id="myid" value="zang" />
+		<button onclick="myVal()">登录</button>
+	</body>
+</html>

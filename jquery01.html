@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>html</title>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="js/jquery-3.6.0.js" ></script>
+		<script type="text/javascript">
+			alert("hello");
+			//加载函数
+			$(document).ready(function(){
+				alert("hello jquery-3");
+			});
+			$().ready(function(){
+				alert("hello jquery-3-01");
+			});
+			$(function(){
+				alert("hello jquery-3-02");
+			});
+			function init(){
+				alert("onload...");
+			
+			}
+			jQuery(document).ready(function(){
+			    alert("jQuery--$")
+			}
+			);
+			jQuery(function(){
+			    alert("jQuery--$--01")
+			
+			})
+			
+		</script>
+	</head>
+	
+	<body onload="init()">
+		<a href="http://www.baidu.com">百度</a>
+		<img src="file:\\D:\\身份证照片\\反面.jpg" width="50" height="50"/>
+	</body>
+</html>

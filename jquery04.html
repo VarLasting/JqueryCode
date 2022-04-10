@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<title>html</title>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="js/jquery-3.6.0.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				/**
+				4、过滤选择器（a、基本过滤选择器 ）
+				: first 最开始
+				：last  最后
+				：even  偶数
+				：odd 奇数
+				：eq(index) 第index个
+				：eq(index) 第index个
+				：gt >index的全部元素
+				：lt <index的全部元素
+				: not(选择器) 除...以外的
+				
+				alert($("li").first().html());
+				alert($("li:first").html());
+				
+				alert($("li").last().html());
+				alert($("li:last").html() + "----------");
+				
+				alert($("li").even().length);
+				alert($("li:even").length + "----------");
+				
+				alert($("li").odd().length);
+				alert($("li:odd").length + "----------");
+				
+				alert($("li").eq(1).html());
+				alert($("li:eq(1)").html() + "----------");
+				
+				
+				alert($("li:gt(2)").length)
+				
+				alert($("li:lt(2)").length)*/
+			})
+			
+			$(function(){
+				/*5、可见性选择器
+				    :visible
+					:hidden
+				*/
+				
+				alert($(":visible").length);
+				alert($(":hidden").length);
+				
+			})
+		
+		
+		</script>
+	
+	</head>
+	
+	<body>
+		<ul>
+			<li>aaa</li>
+			<li id="b">bbb</li>
+			<li id="c">ccc</li>
+			<li id="d">ddd</li>
+			<li id="d">eee</li>
+		</ul>
+	</body>
+</html>

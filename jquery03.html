@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<title>html</title>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="js/jquery-3.6.0.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				//选择器  1、基本选择器（a、标签选择器）
+				//alert($("p").html());
+				//alert($("p").length);
+				//选择器  1、基本选择器（b、类选择器）
+				//alert($(".pcl2").html() + "pcl111");
+			    //选择器  1、基本选择器（c、id选择器）
+			    //alert($("#myTitle_b").html() + "%%%%");
+			
+				//并集选择器（,）
+				//alert($("#myTitle_b,.pcl1").length + "%%%%");
+				//交集选择器（直接写，没有逗号，必须同时存在）
+				//alert($("#myTitle_b.pcl2").html() + "&&&&&&");
+				//全局选择器（*）
+				//alert($("*").length + "%%%%");
+			});
+			$(function(){
+			    //选择器(只取右侧)  2、层次选择器(a、相邻选择器+)
+				//alert($("#b+#c").html());
+				//alert($("#b+#c").length);
+			    //选择器(只取右侧)  2、层次选择器(b、同辈选择器~)
+				//alert($("#b~").length);
+				
+				//选择器  2、层次选择器(c、后代选择器 空格 )
+				//alert($("body li").length)
+				
+			    //选择器  2、层次选择器(d、子代选择器 >)
+                //alert($("body>li").length)
+				//alert($("ul>li").length)
+			});
+		
+		
+		$(function(){
+		    //选择器  3、属性选择器[]
+			alert($("[title='myTitle3']").html());
+			
+		
+		})
+		
+		</script>
+		<style type="text/css">
+			.pcl3{
+				color:red;
+			}
+			#myTitle_b{
+				color:green;
+				font-size:30;
+			}
+		</style>
+	
+	</head>
+	
+	<body>
+		<p id="myTitle_a" class="pcl1">color1</p>
+		<p id="myTitle_b" class="pcl2" title="myTitle2">color2</p>
+		<p id="myTitle_c" class="pcl3" title="myTitle3">color3</p>
+		
+		<ul>
+			<li>aaa</li>
+			<li id="b">bbb</li>
+			<li id="c">ccc</li>
+			<li id="d">ddd</li>
+			<li id="d">eee</li>
+		</ul>
+	</body>
+</html>
